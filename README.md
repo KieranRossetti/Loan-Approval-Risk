@@ -93,7 +93,13 @@ Switch mode using:
 ```python
 FAST_MODE = True   # fast execution
 FAST_MODE = False  # retrain model
-Project Structure
+```
+
+---
+
+## Project Structure
+
+```
 Loan-Approval-Risk/
 │
 ├── data/
@@ -107,55 +113,78 @@ Loan-Approval-Risk/
 │
 ├── requirements.txt
 └── README.md
-How to Run the Project
-Option 1 — Google Colab (recommended)
+```
+
+---
+
+## How to Run the Project
+
+### Option 1 — Google Colab (recommended)
+
 Open the notebook and run all cells:
 
+```
 notebooks/Loan Approval Risk and Loan Limit Prediction.ipynb
+```
 
 The notebook handles setup automatically.
 
-Option 2 — Local Machine
-1. Clone repository
+---
+
+### Option 2 — Local Machine
+
+#### 1. Clone repository
+
+```
 git clone https://github.com/KieranRossetti/Loan-Approval-Risk.git
 cd Loan-Approval-Risk
-2. Install dependencies
+```
+
+#### 2. Install dependencies
+
+```
 pip install -r requirements.txt
-3. Run notebook
+```
+
+#### 3. Run notebook
+
 Open:
 
+```
 notebooks/Loan Approval Risk and Loan Limit Prediction.ipynb
+```
 
 Run all cells.
 
-First Run vs Future Runs
+---
+
+## First Run vs Future Runs
+
 First run:
 
-Trains model
-
-Performs hyperparameter tuning
-
-Saves model
+- trains model  
+- performs hyperparameter tuning  
+- saves model  
 
 Later runs:
 
-Loads saved model instantly (FAST MODE)
+- loads saved model instantly (FAST MODE)
 
-Technologies Used
-Python
+---
 
-pandas
+## Technologies Used
 
-NumPy
+- Python  
+- pandas  
+- NumPy  
+- scikit-learn  
+- matplotlib  
+- seaborn  
+- joblib  
 
-scikit-learn
+---
 
-matplotlib
+## Author
 
-seaborn
-
-joblib
-
-Author
-Kieran Rossetti
+Kieran Rossetti  
 Machine Learning & Data Analytics Portfolio Project
