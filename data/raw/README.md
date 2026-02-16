@@ -6,23 +6,14 @@ The raw data is not modified and serves as the starting point for all preprocess
 
 ---
 
-## Expected File
+## Dataset Availability
 
-Place the following dataset in this folder:
+The dataset is included in this repository for reproducibility and ease of use.
 
-```
-loan_approval_data.csv
-```
+Location:
+data/raw/loan_approval_data.csv
 
 The notebook reads this file directly when running the analysis.
-
----
-
-## Why the Dataset Is Not Included
-
-The dataset is not stored in this repository due to size and distribution restrictions.
-
-To run the project locally, you must provide the dataset yourself.
 
 ---
 
@@ -39,6 +30,16 @@ All transformed outputs are saved in:
 ```
 data/processed/
 ```
+
+---
+
+## Data Integrity Policy
+
+Files in this folder must remain **unchanged**.
+
+All cleaning, transformation, and feature engineering must be performed in the analysis pipeline and saved to the processed data folder.
+
+This ensures reproducibility and preserves the original source data.
 
 ---
 
