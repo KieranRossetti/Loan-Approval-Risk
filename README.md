@@ -34,7 +34,7 @@ The dataset contains approximately **58,600 loan applications** with financial a
 - Loan intent  
 - Home ownership  
 
-### Target variables
+### Target Variables
 
 | Task | Target |
 |---|---|
@@ -50,13 +50,14 @@ The dataset contains approximately **58,600 loan applications** with financial a
 - Feature scaling  
 - One-hot encoding of categorical variables  
 - Class imbalance inspection  
-- Train/test split (80/20, stratified)  
+- Train/test split (80/20, stratified)
 
-### Models Trained
+### Models Evaluated
 
 - Logistic Regression  
+- Naive Bayes  
 - Decision Tree  
-- Random Forest (final model)  
+- Random Forest (final model)
 
 ### Hyperparameter Tuning
 
@@ -65,14 +66,7 @@ Random Forest hyperparameters optimised using:
 - GridSearchCV  
 - 5-fold cross-validation  
 
-Parameters evaluated:
-
-- `n_estimators`  
-- `max_depth`  
-- `min_samples_split`  
-- `max_features`  
-
-Optimisation focused on improving **recall for high-risk (declined) loan applications**.
+Optimisation focused on improving recall for **high-risk (declined) loan applications**.
 
 ---
 
@@ -94,6 +88,49 @@ Switch mode using:
 FAST_MODE = True   # fast execution
 FAST_MODE = False  # retrain model
 ```
+
+---
+
+## Key Results
+
+### Classification Performance (Test Set)
+
+| Model | ROC AUC |
+|---|---|
+| Naive Bayes | 0.87 |
+| Logistic Regression | 0.89 |
+| Random Forest | **0.94** |
+
+Final tuned Random Forest achieved:
+
+- Accuracy ≈ **0.95**
+- Strong recall for declined loans
+- Balanced precision–recall performance
+- Good generalisation with minimal overfitting
+
+---
+
+### Regression Performance (Maximum Loan Prediction)
+
+Two regression feature sets were evaluated.
+
+| Model | R² | Mean Absolute Error |
+|---|---|---|
+| Numerical features only | 0.969 | ≈ £1,210 |
+| Full feature set | **0.971** | ≈ £1,257 |
+
+Both models demonstrate strong predictive performance.  
+Most predictive signal comes from core financial indicators.
+
+---
+
+## Key Findings
+
+- Random Forest significantly outperformed simpler classifiers  
+- Ensemble learning captured complex borrower risk patterns  
+- Financial variables (income, loan size, credit history) drive prediction accuracy  
+- Additional encoded features provide marginal regression improvement  
+- Model provides a reliable framework for risk-based lending decisions  
 
 ---
 
@@ -133,20 +170,20 @@ The notebook handles setup automatically.
 
 ### Option 2 — Local Machine
 
-#### 1. Clone repository
+1. Clone repository
 
 ```
 git clone https://github.com/KieranRossetti/Loan-Approval-Risk.git
 cd Loan-Approval-Risk
 ```
 
-#### 2. Install dependencies
+2. Install dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-#### 3. Run notebook
+3. Run notebook
 
 Open:
 
@@ -155,20 +192,6 @@ notebooks/Loan Approval Risk and Loan Limit Prediction.ipynb
 ```
 
 Run all cells.
-
----
-
-## First Run vs Future Runs
-
-First run:
-
-- trains model  
-- performs hyperparameter tuning  
-- saves model  
-
-Later runs:
-
-- loads saved model instantly (FAST MODE)
 
 ---
 
@@ -184,7 +207,19 @@ Later runs:
 
 ---
 
+## Portfolio Context
+
+This project demonstrates applied machine learning for financial risk modelling, including:
+
+- End-to-end predictive modelling pipeline  
+- Classification and regression modelling  
+- Hyperparameter optimisation  
+- Model evaluation and comparison  
+- Real-world business decision support  
+
+---
+
 ## Author
 
-Kieran Rossetti  
+**Kieran Rossetti**  
 Machine Learning & Data Analytics Portfolio Project
